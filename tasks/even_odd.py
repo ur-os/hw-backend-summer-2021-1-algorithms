@@ -4,8 +4,12 @@ __all__ = (
 
 
 def even_odd(arr: list[int]) -> float:
+    try:
+        even_slice = (2*i for i in arr)
+        odd_slice = (2*i + 1 for i in arr)
+        result = sum(even_slice) / sum(odd_slice)
 
-    even_slice = (2*i for i in arr)
-    odd_slice = (2*i + 1 for i in arr)
+    except ZeroDivisionError:
+        return 1.0
+    return result
 
-    return sum(even_slice) / sum(odd_slice)
