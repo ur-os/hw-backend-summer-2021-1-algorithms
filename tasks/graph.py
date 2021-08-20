@@ -33,6 +33,7 @@ class Graph:
         for node in self._root.outbound:
             traceback = Graph(node).dfs()
 
+
             for element in traceback:
                 if element in result:
                     traceback.remove(element)  # concatenation of lists
