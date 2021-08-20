@@ -11,5 +11,6 @@ def even_odd(arr: list[int]) -> float:
 
     except ZeroDivisionError:
         return 0
+
     return result
 
